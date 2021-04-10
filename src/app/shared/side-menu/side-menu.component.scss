@@ -1,0 +1,8 @@
+.page-content {
+	height: calc(100% - 94px);
+}
+
+mat-drawer-content {
+	overflow-y: auto;
+	overflow-x: hidden;
+}

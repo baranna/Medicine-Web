@@ -1,0 +1,7 @@
+{
+	"/medicine-api": {
+		"target": "https://localhost:44322/api",
+		"secure": false,
+		"pathRewrite": {"^/medicine-api" : ""}
+	}
+}

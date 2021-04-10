@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'theme';
+
+@include angular-material-theme($medicine-app-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title-1 {
+	color: mat-color($medicine-app-primary);
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+.title-2 {
+	font-size: 1em !important;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+	outline: none;
+}
+
+* {
+	outline: none;
+}

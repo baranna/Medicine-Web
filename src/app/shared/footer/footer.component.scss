@@ -1,0 +1,17 @@
+@import 'src/theme';
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	background-color: mat-color($medicine-app-primary);
+	display: flex;
+	width: 100%;
+	color: white;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.footer-text {
+	font-size: 0.8em;
+}

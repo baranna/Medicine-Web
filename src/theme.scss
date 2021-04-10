@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$medicine-app-primary: mat-palette($mat-teal);
+$medicine-app-accent:  mat-palette($mat-amber);
+
+$medicine-app-warn:    mat-palette($mat-red);
+
+$medicine-app-theme: mat-light-theme((
+	color: (
+		primary: $medicine-app-primary,
+		accent: $medicine-app-accent,
+		warn: $medicine-app-warn,
+	)
+));
