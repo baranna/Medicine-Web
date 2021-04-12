@@ -1,0 +1,21 @@
+<h2 class="title-1">List of possible side effects</h2>
+<div class="overflow-auto container">
+	<ng-container *ngIf="sideEffects?.length else noSideEffect">
+		<div *ngFor="let type of sortedEffects | keyvalue">
+			<p class="title-2 accent mt-3 mb-1">{{type.key | uppercase }}</p>
+			<div *ngFor="let effect of type.value">
+				{{effect.sideEffectName}}
+				<ng-container *ngIf="effect.frequencyNumber">
+					<span class="font-weight-200 accent">{{effect.frequencyNumber}}% </span>
+				</ng-container>
+			</div>
+		</div>
+	</ng-container>
+
+	<ng-template #noSideEffect>
+		<div class="d-flex align-items-center">
+			<mat-icon>warning</mat-icon>
+			<span class="title-2 pl-2">There are no side effect records in our database for this product!</span>
+		</div>
+	</ng-template>
+</div>

@@ -1,5 +1,6 @@
-<h1 class="title-1 m-4">Supported products</h1>
-<div class="row justify-content-center">
+<h1 *ngIf="!productId else forSideEffect" class="title-1 m-4">Supported products</h1>
+<ng-template #forSideEffect ><h1 class="title-1 m-4">Products causing {{sideEffect?.name | lowercase}}</h1></ng-template>
+<div *ngIf="!productId" class="row justify-content-center">
 	<mat-card class="col col-lg-10">
 		<h2 class="title-2">Filters</h2>
 		<mat-card-content class="row">
@@ -43,6 +44,13 @@
 				<ng-container matColumnDef="strength">
 					<th mat-header-cell *matHeaderCellDef> Strength</th>
 					<td mat-cell *matCellDef="let product"> {{product.strength}} </td>
+				</ng-container>
+
+				<ng-container matColumnDef="sideEffectButton">
+					<th mat-header-cell *matHeaderCellDef></th>
+					<td mat-cell *matCellDef="let product">
+					<button (click)="openDetails(product.id)" mat-button color="accent">Side effects</button>
+					</td>
 				</ng-container>
 
 				<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
