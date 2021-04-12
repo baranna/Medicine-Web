@@ -1,0 +1,6 @@
+<h1 class="title-1 m-4">Messages</h1>
+<mat-list>
+	<mat-list-item *ngFor="let message of messages">{{message.content}}
+		<span class="accent message-date pl-2">{{message.timeStamp | date:'short'}}</span>
+	</mat-list-item>
+</mat-list>

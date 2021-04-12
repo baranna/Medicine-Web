@@ -3,5 +3,12 @@
 		"target": "https://localhost:44322/api",
 		"secure": false,
 		"pathRewrite": {"^/medicine-api" : ""}
+	},
+	"/behealthy-api": {
+		"target": "http://behealthy-2021.herokuapp.com",
+		"secure": false,
+		"pathRewrite": {"^/behealthy-api" : ""},
+		"logLevel": "debug",
+		"changeOrigin": true
 	}
 }

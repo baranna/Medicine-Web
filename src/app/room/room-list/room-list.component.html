@@ -1,0 +1,5 @@
+<h1 class="title-1 m-4">Rooms available</h1>
+<mat-action-list>
+	<button (click)="navigateToRoom(room._id)" mat-list-item *ngFor="let room of rooms">{{room.title}}
+		<span class="accent pl-1">({{room.messages.length}} messages)</span></button>
+</mat-action-list>

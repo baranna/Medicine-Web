@@ -1,0 +1,24 @@
+<h1 class="title-1 m-4">Login</h1>
+<div class="row justify-content-center">
+	<mat-card class="col-lg-8 p-5">
+		<mat-card-content>
+			<div class="row justify-content-center">
+				<mat-form-field class="col-lg-6">
+					<mat-label>Username</mat-label>
+					<input matInput type="text" [formControl]="form.get('username')">
+				</mat-form-field>
+			</div>
+			<div class="row justify-content-center mt-2">
+				<mat-form-field class="col-lg-6">
+					<mat-label>Password</mat-label>
+					<input matInput type="password" [formControl]="form.get('password')">
+				</mat-form-field>
+			</div>
+			<div class="row justify-content-center mt-2">
+				<button mat-raised-button color="accent" (click)="login()">
+					Login
+				</button>
+			</div>
+		</mat-card-content>
+	</mat-card>
+</div>
